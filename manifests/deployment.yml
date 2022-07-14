@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: eddiestackvdockercomposeaspnetcpre 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: eddiestackvdockercomposeaspnetcpre
+  template:
+    metadata:
+      labels:
+        app: eddiestackvdockercomposeaspnetcpre 
+    spec:
+      containers:
+        - name: eddiestackvdockercomposeaspnetcpre 
+          image: newrelic.azurecr.io/eddiestackvdockercomposeaspnetcpre
+          ports:
+          - containerPort: 80
