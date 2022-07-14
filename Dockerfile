@@ -29,7 +29,7 @@ CORECLR_PROFILER={36032161-FFC0-4B61-B559-F6C5D41BAE5A} \
 CORECLR_NEWRELIC_HOME=/usr/local/newrelic-netcore20-agent \
 CORECLR_PROFILER_PATH=/usr/local/newrelic-netcore20-agent/libNewRelicProfiler.so \
 NEW_RELIC_LICENSE_KEY=eu01xx99c7993c7a1b6e90daaf0ee0f511c3NRAL \
-NEW_RELIC_APP_NAME=BookManagementAKS
+NEW_RELIC_APP_NAME=BookManagementAKS_New_Relic
 
 WORKDIR /app
 EXPOSE 80
