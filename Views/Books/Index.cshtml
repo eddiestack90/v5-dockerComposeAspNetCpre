@@ -1,0 +1,10 @@
+@model List<BookManagement.Models.Book>
+
+<a asp-action="Create" asp-controller="Books" class="btn btn-success">Create a book</a>
+
+<ul>
+    @foreach (var book in Model)
+    {
+        <li>@book.Name</li>
+    }
+</ul>

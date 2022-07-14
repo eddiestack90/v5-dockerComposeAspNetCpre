@@ -1,0 +1,23 @@
+version: '3.8'
+services:
+  ms-sql-server:
+    image: mcr.microsoft.com/mssql/server:2017-latest-ubuntu
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: "Youtube2021"
+      MSSQL_PID: Express
+    ports:
+      - "1433:1433"
+  book-app:
+    build: 
+      context: .
+      args:
+        buildnbinfo: 1
+    environment:
+      DbServer: "ms-sql-server"
+      DbPort: "1433"
+      DbUser: "SA"
+      Password: "Youtube2021"
+      Database: "bookDb"
+    ports: 
+      - "8090:80"
